@@ -159,3 +159,19 @@ function dropExperience(number) {
         experienceButtons[number].classList.add("bx-plus");
     }    
 }
+
+
+
+function redirect(direction) {
+    if (direction == "github") {
+        window.open("https://github.com/AstroIzan");
+    } else if (direction == "linkedin") {
+        window.open("https://www.linkedin.com/in/izan-estirado-alfaro-6871a016b/");
+    } else if (direction == "instagram") {
+        window.open("https://www.instagram.com/astro_izan/");
+    } else if (direction == "email") {
+        window.open("mailto:izan2003@gmail.com");
+    } else if (direction == "tlf") {
+        window.open("tel:+34690293356");
+    }
+}

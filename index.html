@@ -16,8 +16,8 @@
                 <li><a onclick="dropMenu()" href="#home"><span>01</span>Home</a></li>
                 <li><a onclick="dropMenu()" href="#about"><span>02</span>About</a></li>
                 <li><a onclick="dropMenu()" href="#services"><span>03</span>Services</a></li>
-                <li><a onclick="dropMenu()" href="#projects"><span>04</span>Projects</a></li>
-                <li><a onclick="dropMenu()" href="#experience"><span>05</span>Experience</a></li>
+                <li><a onclick="dropMenu()" href="#experience"><span>04</span>Experience</a></li>
+                <li><a onclick="dropMenu()" href="#projects"><span>05</span>Projects</a></li>
                 <li><a onclick="dropMenu()" href="#contact"><span>06</span>Contact</a></li>
             </ul>
             <div class="burger" id="burger" onclick="dropMenu();">
@@ -53,9 +53,9 @@
             </div>
         </div>
     </section>
-    <section id="services" class="column-start">
+    <section id="services" class="column-center">
         <h2 class="mt-5">Services</h2>
-        <p>I offer services as a freelance, to be able to develop my knowledge in new projects</p>
+        <p class="column-center">I offer services as a freelance, to be able to develop my knowledge in new projects</p>
         <div class="row-space">
             <div class="mt-5 service">
                 <h3 class="ml-2 mt-2">Web or Database Design</h3>
@@ -212,12 +212,48 @@
     <section id="experience" class="pt-1">
         <div class="container column-center">
             <h2>Experience</h2>
-            <div class="experience column-center mt-3">
+            <div class="experience column-center mt-3" onclick="dropExperience(0)">
+                <div class="basicInfo row-space-all">
+                    <p class="ml-3">General Services -- Hospital Parc Tauli</p>
+                    <div class="row-end">
+                        <p class="mr-2">2023 - 2023</p>
+                        <span class='experienceButton bx bx-plus mr-2'></span>
+                    </div>
+                </div>
+                <div class="extendedInfo mt-1 row-center">
+                    <div class="info column-center">
+                        <div class="row-start w-100 mt-2 ml-5">
+                            <p class="row-start m-0">
+                                <span class='bx bx-pin mr-1'></span>
+                                <span class="">Sabadell, Barcelona, Spain</span>
+                                <span class='ml-3 mr-1 bx bx-link-external' ></span>
+                                <div class="serviceLink">
+                                    <a href="https://www.tauli.cat/tauli/" target="_blank" class="">tauli.cat</a>
+                                    <div class="serviceLine"></div>
+                                </div>
+                            </p>
+                        </div>
+                        <div class="row-start w-100 mt-2 ml-5">
+                            <p class="m-0">Technician in waste management and cleaning in the general services position in the hospital.</p>
+                        </div>
+                        <div class="row-start w-100 mt-2 mb-2 ml-5">
+                            <p class="roundedExperience p-1 m-0 ml-1 mr-1">Teamwork</p>
+                            <p class="roundedExperience p-1 m-0 ml-1 mr-1">Communication</p>
+                            <p class="roundedExperience p-1 m-0 ml-1 mr-1">Organization</p>
+                            <p class="roundedExperience p-1 m-0 ml-1 mr-1">Responsibility</p>
+                        </div>
+                    </div>
+                    <div class="image m-2 column-center">
+                        <img class="ml-3" src="src/experience/tauli.jpg" alt="Education department of catalonia logo">
+                    </div>
+                </div>
+            </div>
+            <div class="experience column-center mt-1" onclick="dropExperience(1)">
                 <div class="basicInfo row-space-all">
                     <p class="ml-3">Software Developer Trainee -- Compettia</p>
                     <div class="row-end">
                         <p class="mr-2">2022 - 2023</p>
-                        <span onclick="dropExperience(0)" class='experienceButton bx bx-plus mr-2'></span>
+                        <span class='experienceButton bx bx-plus mr-2'></span>
                     </div>
                 </div>
                 <div class="extendedInfo mt-1 row-center">
@@ -250,12 +286,12 @@
                     </div>
                 </div>
             </div>
-            <div class="experience column-center mt-1">
+            <div class="experience column-center mt-1" onclick="dropExperience(2)">
                 <div class="basicInfo row-space-all">
                     <p class="ml-3">General Services -- Hospital Parc Tauli</p>
                     <div class="row-end">
                         <p class="mr-2">2021 - 2022</p>
-                        <span onclick="dropExperience(1)" class='experienceButton bx bx-plus mr-2'></span>
+                        <span class='experienceButton bx bx-plus mr-2'></span>
                     </div>
                 </div>
                 <div class="extendedInfo mt-1 row-center">
@@ -286,12 +322,12 @@
                     </div>
                 </div>
             </div>
-            <div class="experience column-center mt-1">
+            <div class="experience column-center mt-1" onclick="dropExperience(3)">
                 <div class="basicInfo row-space-all">
                     <p class="ml-3">Computer Technician -- INS Polinya</p>
                     <div class="row-end">
                         <p class="mr-2">2020 - 2021</p>
-                        <span onclick="dropExperience(2)" class='experienceButton bx bx-plus mr-2'></span>
+                        <span class='experienceButton bx bx-plus mr-2'></span>
                     </div>
                 </div>
                 <div class="extendedInfo mt-1 row-center">
@@ -478,9 +514,61 @@
             </div>
         </div>
     </section>
-    <footer class="pt-4 mt-5">
-        <div class="container">
-
+    <footer class="mt-5">
+        <div class="row-center">
+            <div class="footerInfo column-start">
+                <h2 class="pt-5">Available for select <br>freelance opportunities</h2>
+                <p class="pl-3">Have an exciting project you need<br>help with?<br>Send me an email or contact me via<br>instant message!</p>
+                <div class="column-start pb-5 pl-2">
+                    <div class="row-start p-1" onclick="redirect('instagram')">
+                        <span class='bx bxl-instagram mr-1'></span>
+                        <a href="https://www.instagram.com/astro_izan/" target="_blank" class="">@AstroIzan</a>
+                    </div>
+                    <div class="row-start p-1" onclick="redirect('linkedin')">
+                        <span class='bx bxl-linkedin mr-1'></span>
+                        <a href="https://www.linkedin.com/in/izan-estirado-alfaro-6871a016b/" target="_blank" class="">@IzanEstiradoAlfaro</a>
+                    </div>
+                    <div class="row-start p-1" onclick="redirect('github')">
+                        <span class='bx bxl-github mr-1'></span>
+                        <a href="https://github.com/AstroIzan" target="_blank" class="">@AstroIzan</a>
+                    </div>
+                    <div class="row-start p-1" onclick="redirect('email')">
+                        <span class='bx bx-envelope mr-1'></span>
+                        <a href="mailto:izan2003@gmail.com" class="">izan2003@gmail.com</a>
+                    </div>
+                    <div class="row-start p-1" onclick="redirect('tlf')">
+                        <span class='bx bx-phone mr-1'></span>
+                        <a href="tel:+34722728925" class="">722 72 89 25</a>
+                    </div>
+                </div>
+            </div>
+            <div class="contactInfo column-center">
+                <h2>Contact Form</h2>
+                <p>Send me a message and I will get back to you as soon as possible!</p>
+                <form action="" class="column-center">
+                    <div class="row-center mt-1">
+                        <div class="column-start">
+                            <label for="name" class="pl-3">Full Name</label>
+                            <input type="text" name="name" id="name" placeholder="Your name" required>
+                        </div>
+                        <div class="column-start right_input">
+                            <label for="email" class="pl-5">Email</label>
+                            <input type="email" name="email" id="email" placeholder="Ex. izan2003@gmail.com" required>
+                        </div>
+                    </div>
+                    <div class="column-start">
+                        <label for="subject" class="pl-3 mt-1">Subject</label>
+                        <input type="text" name="subject" id="subject" placeholder="Ex. Web Design" required>
+                    </div>
+                    <div class="column-start">
+                        <label for="message" class="pl-3 mt-1">Message</label>
+                        <textarea class="pt-1" name="message" id="message" cols="40" rows="8" placeholder="What are you thinking?" required></textarea>
+                    </div>
+                    <div class="column-end">
+                        <input type="submit" value="Send Message" class="mt-1">
+                    </div>
+                </form>
+            </div>
         </div>
     </footer>
     <script src="js/script.js"></script>

@@ -49,8 +49,8 @@
     .column-start {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        align-items: center; }
+        justify-content: center;
+        align-items: flex-start; }
     
     .column-center {
         display: flex;
@@ -61,8 +61,8 @@
     .column-end {
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
-        align-items: center; }
+        justify-content: center;
+        align-items: flex-end; }
 
     .row-start {
         display: flex;
@@ -624,6 +624,7 @@
         .experience { width: 60vw; }
 
         .experience .basicInfo {
+            cursor: pointer;
             color: var(--white);
             font-weight: bold;
             border-radius: 5px;
@@ -631,6 +632,12 @@
             height: 100%;
             background-color: var(--wm-details); }
 
+        .experience .basicInfo:hover {
+            background-color: var(--wm-details-hover); }
+
+        .experience .basicInfo:hover .experienceButton {
+            color: var(--wm-dark-background); }
+        
         .experience .basicInfo div span {
             cursor: pointer;
             font-size: 1.6em;
@@ -687,20 +694,18 @@
             margin: 5%;
             cursor: pointer;
             border-radius: 5px;
-            min-height: 30vh;
+            min-height: 25vh;
             width: 90%; }
 
         .certificate:hover { background-color: var(--wm-details-alpha50); }
 
         .certificate .date {
-            min-height: 30vh;
             height: 100%;
             width: 25%; }
 
         .certificate .date p { font-size: 0.9em; }
 
         .certificate .certificateInfo {
-            min-height: 30vh;
             height: 100%;
             width: 75%; }
 
@@ -721,6 +726,97 @@
         
     /*** FOOTER ***/
         footer { 
-            border-top: 1px solid var(--wm-details);
-            min-height: 15vh;
-        }
+            border-top: 1px solid var(--wm-details); }
+
+        footer .footerInfo {
+            text-align: left;
+            background-color: var(--wm-details);
+            width: 50%;
+            height: 100%; }
+        
+        footer .footerInfo h2, footer .footerInfo p, footer .footerInfo .column-start {
+            margin-left: 100px;
+            width: 100%;
+            color: var(--wm-background); }
+        
+        footer .footerInfo span {
+            color: var(--wm-background);
+            font-size: 1.1em; }
+
+        footer .footerInfo .row-start { cursor: pointer; }
+
+        footer .footerInfo .row-start:hover {
+            border-radius: 30px;
+            background-color: var(--wm-dark-background); }
+
+        footer .footerInfo .row-start:hover span, footer .footerInfo .row-start:hover a {
+            color: var(--wm-details); }
+
+        footer .contactInfo {
+            width: 50%;
+            height: 100%; }
+        
+        footer .contactInfo h2, footer .contactInfo p, footer .contactInfo form {
+            width: 80%;
+            text-align: center;
+            color: var(--wm-details); }
+        
+        footer .contactInfo .row-center {
+            width: 100%; }
+
+        footer .contactInfo .row-center .column-start, footer .contactInfo .column-start { width: 100%; }
+
+        footer .contactInfo .row-center .column-start input { width: 95% !important; }
+        
+        footer .contactInfo .row-center .right_input input { 
+            margin-left: 5%;
+            width: 95% !important; }
+        
+        footer .contactInfo input, textarea {            
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 1.1em;
+            height: 4vh;
+            padding-left: 15px;
+            border-radius: 50px;
+            background-color: var(--wm-details);
+            border: 2px solid var(--wm-details);
+            font-family: 'Poiret One', cursive; }
+
+        ::-webkit-input-placeholder { color: var(--wm-background); }
+
+        footer .contactInfo textarea {
+            border-radius: 20px;
+            height: 15vh; }
+
+        footer .contactInfo input:focus, footer .contactInfo textarea:focus {
+            outline: none;
+            border-radius: 5px;
+            font-weight: bold;
+            color: var(--gray);
+            background-color: var(--wm-background); }
+
+        footer .contactInfo input[type="submit"] {
+            border: none;
+            border-bottom: 2px solid var(--wm-details);
+            box-sizing: content-box;
+            border-radius: 0px;
+            width: auto;
+            padding: 5px 10px;
+            text-align: center;
+            cursor: pointer;
+            color: var(--wm-details);
+            font-size: 1.5em;
+            font-weight: bold;
+            background-color: transparent; }
+
+        footer .contactInfo input[type="submit"]:hover {
+            border-radius: 50px;
+            color: var(--wm-dark-background);
+            background-color: var(--wm-details);}
+
+        footer .contactInfo .column-end {
+            width: 100%; }
+
+
+    
