@@ -818,5 +818,52 @@
         footer .contactInfo .column-end {
             width: 100%; }
 
+/* ERROR PAGE */
+    #errorPage {
+        height: 100vh;
+        width: 100%; }
 
+    #errorPage #infoPage {
+        height: 100%;
+        background-color: var(--wm-background);
+        width: 50%; }
+
+    #errorPage #infoPage h1 {
+        text-align: center;
+        line-height: 0.85em; }
     
+    #errorPage #infoPage .btn {
+        margin: 0 auto;
+        padding: 5px 10px;
+        border: 2px solid var(--wm-details);
+        border-radius: 50px;
+        background-color: var(--wm-details);
+        color: var(--wm-background);
+        font-size: 1.2em;
+        font-weight: bold;
+        cursor: pointer; }
+
+    #errorPage #infoPage .btn:hover {
+        background-color: var(--wm-background);
+        color: var(--wm-details); }
+
+    #errorPage #spanPage {
+        display: grid;
+        place-items: center center;
+        height: 100%;
+        background-color: var(--wm-details);
+        width: 50%; }
+
+    #errorPage #spanPage span {
+        font-size: 20em;
+        color: var(--wm-background); }
+
+    #errorPage .scrolldown .text { text-align: center;}
+
+    #errorPage .scrolldown {
+        position: absolute;
+        bottom: 1%;
+        left: 25%;
+        transform: translate(-50%, -5%) scale(0.5); 
+        width: 20%; }
+
