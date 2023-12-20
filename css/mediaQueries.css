@@ -132,6 +132,60 @@
             #certificates .certificate .date p {
                 transform: rotate(0deg);
                 margin: 0px; }
+        
+        /* FOOTER */
+            footer { flex-direction: column-reverse !important; }
+            footer .footerInfo {
+                align-items: center;
+                width: 100%;
+                height: auto; }
+            footer .footerInfo h2 { 
+                text-align: center;
+                width: 90%;
+                font-size: 2.2em; 
+                padding-left: 0px;
+                margin-left: 0px; }
+            footer .footerInfo p { 
+                text-align: center;
+                padding-left: 0px;
+                margin-left: 0px;
+                width: 90%; }
+            footer .footerInfo .rrss {
+                padding-left: 0px;
+                margin-left: 0px;
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                width: auto;
+                height: auto; }
+            footer .footerContact {
+                margin: 30px 0px;
+                width: 100%;
+                height: auto; }
+            footer .footerContact .row-center { flex-direction: column; }
+            footer .footerContact .row-center .column-start { align-items: flex-start !important; }
+            footer .footerContact .row-center .column-start input {
+                width: 100% !important;
+                margin: 0px; }
+            footer .footerContact .row-center .column-start label { padding-left: 30px; }
+            footer .footerContact .row-center .right_input { margin-top: 10px; }
+
+        /* ERROR PAGE */
+            #errorPage #infoPage { width: 100%; }
+            #errorPage #infoPage h1 { 
+                text-align: center;
+                width: 70%;
+                font-size: 4em; }
+            #errorPage #infoPage p { 
+                text-align: center;
+                width: 70%; 
+                font-size: 1.2em; }
+            #errorPage #imagePage {
+                display: none; }
+            #errorPage .scrolldown {
+                left: 50%;
+                width: 100%;
+            }
+                
     }
 
     @media only screen and (min-width: 480px) { 
@@ -229,6 +283,58 @@
             #certificates .certificate .date p {
                 transform: rotate(0deg);
                 margin: 0px; }
+
+        /* FOOTER */
+            footer { flex-direction: column-reverse !important; }
+            footer .footerInfo {
+                align-items: center;
+                width: 100%;
+                height: auto; }
+            footer .footerInfo h2 { 
+                text-align: center;
+                width: 90%;
+                font-size: 2.2em; 
+                padding-left: 0px;
+                margin-left: 0px; }
+            footer .footerInfo p { 
+                text-align: center;
+                padding-left: 0px;
+                margin-left: 0px;
+                width: 90%; }
+            footer .footerInfo .rrss {
+                padding-left: 0px;
+                margin-left: 0px;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                width: auto;
+                height: auto; }
+            footer .footerContact {
+                margin: 30px 0px;
+                width: 100%;
+                height: auto; }
+            footer .footerContact .row-center { flex-direction: column; }
+            footer .footerContact .row-center .column-start { align-items: flex-start !important; }
+            footer .footerContact .row-center .column-start input {
+                width: 100% !important;
+                margin: 0px; }
+            footer .footerContact .row-center .column-start label { padding-left: 30px; }
+            footer .footerContact .row-center .right_input { margin-top: 10px; }
+
+        /* ERROR PAGE */
+            #errorPage #infoPage { width: 100%; }
+            #errorPage #infoPage h1 { 
+                width: 70%;
+                font-size: 5em; }
+            #errorPage #infoPage p { 
+                text-align: center;
+                width: 70%; 
+                font-size: 1.2em; }
+            #errorPage #imagePage {
+                display: none; }
+            #errorPage .scrolldown {
+                left: 50%;
+                width: 100%;
+            }
     }
 
     @media only screen and (min-width: 768px) {
@@ -316,6 +422,52 @@
             #certificates .certificate .date p {
                 transform: rotate(-90deg);
                 margin: 0px; }
+        
+        /* FOOTER */
+            footer { flex-direction: column-reverse !important; }
+            footer .footerInfo {
+                align-items: flex-start;
+                width: 100%;
+                height: auto; }
+            footer .footerInfo h2 { 
+                text-align: left;
+                width: 70%;
+                font-size: 2.6em; 
+                margin-left: 70px; }
+            footer .footerInfo p { 
+                padding-left: 30px;
+                text-align: left;
+                margin-left: 70px;
+                width: 70%; }
+            footer .footerInfo .rrss {
+                padding-left: 30px;
+                margin-left: 70px;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                width: auto;
+                height: auto; }
+            footer .footerContact {
+                margin: 30px 0px;
+                width: 100%;
+                height: auto; }
+            footer .footerContact .row-center { flex-direction: column; }
+            footer .footerContact .row-center .column-start { align-items: flex-start !important; }
+            footer .footerContact .row-center .column-start input {
+                width: 100% !important;
+                margin: 0px; }
+            footer .footerContact .row-center .column-start label { padding-left: 30px; }
+            footer .footerContact .row-center .right_input { margin-top: 10px; }
+                
+        /* ERROR PAGE */
+            #errorPage #infoPage { width: 100%; }
+            #errorPage #infoPage h1 { width: 90%; }
+            #errorPage #infoPage p { width: 70%; }
+            #errorPage #imagePage {
+                display: none; }
+            #errorPage .scrolldown {
+                left: 50%;
+                width: 100%;
+            }
     }
 
     @media only screen and (min-width: 1024px) {
@@ -388,10 +540,76 @@
                 margin-top: 50px;
                 margin-right: 20px;
                 transform: rotate(0deg); }
+
+        /* FOOTER */
+            footer { 
+                height: auto;
+                flex-direction: row !important; }
+            footer .footerInfo {
+                padding: 40px 0px;
+                width: 50%;
+                height: 100%; }
+            footer .footerInfo h2 { 
+                margin-left: 70px;
+                font-size: 2.6em; }
+            footer .footerInfo p { 
+                margin-left: 70px; }
+            footer .footerInfo .rrss {
+                margin-left: 70px;
+                display: flex;
+                flex-direction: column;
+                width: auto;
+                height: 100%; }
+            footer .footerContact {
+                margin: 0px;
+                width: 50%;
+                height: auto; }
+            footer .footerContact .row-center { flex-direction: column; }
+            footer .footerContact .row-center .column-start { align-items: flex-start !important; }
+            footer .footerContact .row-center .column-start input {
+                width: 100% !important;
+                margin: 0px; }
+            footer .footerContact .row-center .column-start label { padding-left: 30px; }
+            footer .footerContact .row-center .right_input { margin-top: 10px; }
             
+            
+        /* ERROR PAGE */
+            #errorPage {
+                flex-direction: row; }
+            #errorPage #infoPage { width: 50%; }
+            #errorPage #infoPage h1 { font-size: 5em; }
+            #errorPage #infoPage p { 
+                text-align: center;
+                width: 70%; 
+                font-size: 1.2em; }
+            #errorPage #imagePage {
+                display: flex;
+                width: 50%; }
+            #errorPage .scrolldown {
+                left: 25%;
+                width: 30%;
+            }
     }
 
     @media only screen and (min-width: 1440px) {
-        
+        /* FOOTER */
+            footer .footerInfo h2 { 
+                margin-left: 90px;
+                font-size: 3.5em; }
+            footer .footerInfo p { 
+                margin-left: 90px;
+                font-size: 1.2em; }
+            footer .footerInfo .rrss { margin-left: 90px; }
+            footer .footerInfo { 
+                padding: 0px;
+                width: 50%;
+                height: 100%; }
+            footer .footerContact .row-center { flex-direction: row; }
+            footer .footerContact .row-center .column-start input { width: 95% !important; }
+            footer .footerContact .row-center .right_input { 
+                align-items: flex-end !important;
+                margin-top: 0px; }
+            footer .footerContact .row-center .right_input label { margin-right: 30px; }
+                
     }
 

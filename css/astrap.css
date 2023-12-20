@@ -752,27 +752,27 @@
         footer .footerInfo .row-start:hover span, footer .footerInfo .row-start:hover a {
             color: var(--wm-details); }
 
-        footer .contactInfo {
+        footer .footerContact {
             width: 50%;
             height: 100%; }
         
-        footer .contactInfo h2, footer .contactInfo p, footer .contactInfo form {
+        footer .footerContact h2, footer .footerContact p, footer .footerContact form {
             width: 80%;
             text-align: center;
             color: var(--wm-details); }
         
-        footer .contactInfo .row-center {
+        footer .footerContact .row-center {
             width: 100%; }
 
-        footer .contactInfo .row-center .column-start, footer .contactInfo .column-start { width: 100%; }
+        footer .footerContact .row-center .column-start, footer .footerContact .column-start { width: 100%; }
 
-        footer .contactInfo .row-center .column-start input { width: 95% !important; }
+        footer .footerContact .row-center .column-start input { width: 95% !important; }
         
-        footer .contactInfo .row-center .right_input input { 
+        footer .footerContact .row-center .right_input input { 
             margin-left: 5%;
             width: 95% !important; }
         
-        footer .contactInfo input, textarea {            
+        footer .footerContact input, textarea {            
             width: 100%;
             box-sizing: border-box;
             font-size: 1.1em;
@@ -785,18 +785,18 @@
 
         ::-webkit-input-placeholder { color: var(--wm-background); }
 
-        footer .contactInfo textarea {
+        footer .footerContact textarea {
             border-radius: 20px;
             height: 15vh; }
 
-        footer .contactInfo input:focus, footer .contactInfo textarea:focus {
+        footer .footerContact input:focus, footer .footerContact textarea:focus {
             outline: none;
             border-radius: 5px;
             font-weight: bold;
             color: var(--gray);
             background-color: var(--wm-background); }
 
-        footer .contactInfo input[type="submit"] {
+        footer .footerContact input[type="submit"] {
             border: none;
             border-bottom: 2px solid var(--wm-details);
             box-sizing: content-box;
@@ -810,12 +810,12 @@
             font-weight: bold;
             background-color: transparent; }
 
-        footer .contactInfo input[type="submit"]:hover {
+        footer .footerContact input[type="submit"]:hover {
             border-radius: 50px;
             color: var(--wm-dark-background);
             background-color: var(--wm-details);}
 
-        footer .contactInfo .column-end {
+        footer .footerContact .column-end {
             width: 100%; }
 
 /* ERROR PAGE */
@@ -847,16 +847,14 @@
         background-color: var(--wm-background);
         color: var(--wm-details); }
 
-    #errorPage #spanPage {
+    #errorPage #imagePage {
         display: grid;
         place-items: center center;
         height: 100%;
         background-color: var(--wm-details);
         width: 50%; }
 
-    #errorPage #spanPage span {
-        font-size: 20em;
-        color: var(--wm-background); }
+    #errorPage #imagePage img { width: 90% !important; }
 
     #errorPage .scrolldown .text { text-align: center;}
 
@@ -866,4 +864,3 @@
         left: 25%;
         transform: translate(-50%, -5%) scale(0.5); 
         width: 20%; }
-
