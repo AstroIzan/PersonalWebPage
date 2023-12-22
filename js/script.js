@@ -160,8 +160,6 @@ function dropExperience(number) {
     }    
 }
 
-
-
 function redirect(direction) {
     if (direction == "github") {
         window.open("https://github.com/AstroIzan");
@@ -175,3 +173,27 @@ function redirect(direction) {
         window.open("tel:+34690293356");
     }
 }
+
+var dropProjects = document.getElementById("dropProjects");
+var dropProjectsText = document.getElementById("dropProjectsText");
+var dropProjectsArrows = document.getElementsByName("dropProjectsArrows");
+function showMoreProject() {
+    if (dropProjectsText.textContent == "Show more projects") {
+        dropProjects.style.height = "100%";
+        dropProjects.style.display = "grid";
+        for (let i = 0; i < dropProjectsArrows.length; i++) {
+            dropProjectsArrows[i].classList.remove("bxs-chevrons-down");
+            dropProjectsArrows[i].classList.add("bxs-chevrons-up");
+        }
+        dropProjectsText.textContent = "Show less projects";
+    } else {
+        dropProjects.style.height = "0%";
+        dropProjects.style.display = "none";
+        for (let i = 0; i < dropProjectsArrows.length; i++) {
+            dropProjectsArrows[i].classList.remove("bxs-chevrons-up");
+            dropProjectsArrows[i].classList.add("bxs-chevrons-down");
+        }
+        dropProjectsText.textContent = "Show more projects";
+    }
+}
+

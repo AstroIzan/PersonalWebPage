@@ -30,6 +30,7 @@
 
 /* TAMAÑOS A UTILIZAR */
 /* 
+    No avaliable     - min 0px
     Small Mobile     - min 320px
     Landscape Mobile - min 480px
     Tablet           - min 768px
@@ -40,6 +41,166 @@
 
 /* MEDIA QUERIES */
     @media only screen and (min-width: 0px) {
+        #available { display: none; }
+        #not-available { display: flex; }
+    }
+
+    @media only screen and (min-width: 320px) {
+        /* BODY */
+            #available { display: block; }
+            #not-available { display: none; }
+        /* HEADER */
+            /** NAV **/
+                nav { 
+                    background-color: transparent;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-direction: row; }
+
+                #menu ul{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100vh;
+                    background: var(--wm-dark-background);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    transform: translateX(-100%);
+                    transition: transform 0.5s ease-in; }
+
+                #menu ul li { margin: 10px 0px; }
+
+                #menu ul a {
+                    font-size: 1.5em;
+                    font-weight: 600;
+                    text-decoration: none;
+                    margin: 1rem; }
+
+                .burger {
+                    position: absolute;
+                    top: 2.5vh;
+                    right: 2.5vw;
+                    display: block;
+                    z-index: 999; }
+                
+            /** Page Title **/
+                #pageTitle h1 { font-size: 6em; }
+                #rotative-text { font-size: 1.5em; }
+
+            /** Scroller **/
+                .scrolldown { transform: scale(0.5); }
+
+        /* LANDSCAPE */
+            #landscape { display: none; }
+
+        /* ABOUT */
+            #about img { display: none; }
+            #about #aboutInfo { width: 100%; }
+            #about #aboutInfo p { padding: 0px; }
+
+        /* SERVICES */
+            #services { height: auto; }
+            .servicesGrid { grid-template-columns: repeat(1, 1fr); }
+            #services div.row-space {
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: center; }
+            #services .service { 
+                min-height: auto;
+                width: 90vw; }
+            #services .service .imageCircle {
+                width: 6vw;
+                height: 6vw;
+                border-radius: 50%;
+                background-color: var(--wm-background); }
+    
+            #services .service .imageCircle img {
+                width: 3vw;
+                margin: 0 auto; }  
+        /* SERVICE FORM */
+            #serviceForm .modal-content { 
+                margin: 1% auto;
+                width: 90%; }
+            #serviceForm .modal-content #formInfo { 
+                justify-content: flex-start;
+                overflow-y: auto;
+                overflow-x: hidden; }
+            #serviceForm .modal-content form { width: 100%; }
+            #serviceForm .modal-content form .row-center { 
+                margin: 0px;
+                flex-direction: column;
+                align-items: center; 
+                width: 100%; }
+            #serviceForm .modal-content form .row-center .column-start { 
+                margin: 20px 0px 0px 0px;
+                width: 100%; }
+            #serviceForm .modal-content form .row-center .column-start input, #serviceForm .modal-content form .row-center .column-start textarea, #serviceForm .modal-content form .row-center .column-start .radioInput { width: 95%; }
+            #serviceForm .modal-content form .row-center .column-start label { width: 90%; }
+
+        /* EXPERIENCE */
+            #experience .container { width: 90%; }
+            #experience .container .experience { width: 100%; }
+            #experience .experience .basicInfo .textInfo { 
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start; }
+            #experience .experience .basicInfo .textInfo .experienceName { margin: 20px 30px 5px; }
+            #experience .experience .basicInfo .textInfo .experienceDate { margin: 5px 30px 20px; }
+            #experience .container .experience .extendedInfo { justify-content: space-between; }
+            #experience .container .experience .extendedInfo .info .externalInfo { margin-top: 0px; }
+            #experience .container .experience .extendedInfo .workInfo { 
+                flex-direction: column; 
+                align-items: flex-start;
+                width: 100%; }
+            #experience .container .experience .extendedInfo .textInfo { 
+                width: 95%;
+                font-size: 0.8em;
+                margin-top: 10px; }
+            #experience .container .experience .extendedInfo .workInfo .bx-link-external { margin-left: 0px; }
+            #experience .container .experience .extendedInfo .roundedExperiences { display: none; }
+            #experience .container .experience .extendedInfo .image { display: none; }
+
+        /* CERTIFICATES */
+            #certificates {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center; }
+            #certificates .certificate { 
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                transform: scale(0.9);
+                margin: 0px auto; }
+            #certificates .certificate .certificateInfo h3 { margin: 0px; }
+            #certificates .certificate p.info {
+                padding-right: 10%;
+                width: 90%; }
+            #certificates .certificate .certificateInfo { width: 100%; }
+            #certificates .certificate .date {
+                width: 100%;
+                align-items: flex-start;
+                min-height: auto;
+                height: auto; }
+            #certificates .certificate .date p {
+                transform: rotate(0deg);
+                margin: 0px; }
+
+        /* PROJECTS */
+            .projectGrid { grid-template-columns: repeat(1, 1fr); }
+            #projects .project { width: 100%; }
+            #projects .project .icons span { font-size: 1.6em;}
+            #projects .project .downCard p { 
+                margin-top: 30px;
+                font-size: 1em; }
+
         /* FOOTER */
             footer { flex-direction: column-reverse !important; }
             footer .footerInfo {
@@ -143,27 +304,78 @@
 
             /** Scroller **/
             .scrolldown { transform: scale(0.5); }
+        
+        /* LANDSCAPE */
+            #landscape { display: none; }
 
         /* ABOUT */
             #about img { display: none; }
-            #about #aboutInfo { width: 90vw; }
+            #about #aboutInfo { width: 100%; }
+            #about #aboutInfo p { padding: 0px; }
+
         /* SERVICES */
             #services { height: auto; }
+            .servicesGrid { grid-template-columns: repeat(1, 1fr); }
             #services div.row-space {
                 display: flex;
                 flex-direction: column;
                 justify-content: start;
                 align-items: center; }
-            #services .service { width: 90vw; }
+            #services .service { 
+                min-height: auto;
+                width: 90vw; }
             #services .service .imageCircle {
-                width: 5vw;
-                height: 5vw;
+                width: 6vw;
+                height: 6vw;
                 border-radius: 50%;
                 background-color: var(--wm-background); }
     
             #services .service .imageCircle img {
-                width: 2.5vw;
+                width: 3vw;
                 margin: 0 auto; }
+            
+        /* SERVICE FORM */
+            #serviceForm .modal-content { 
+                margin: 1% auto;
+                width: 90%; }
+            #serviceForm .modal-content #formInfo { 
+                justify-content: flex-start;
+                overflow-y: auto;
+                overflow-x: hidden; }
+            #serviceForm .modal-content form { width: 100%; }
+            #serviceForm .modal-content form .row-center { 
+                margin: 0px;
+                flex-direction: column;
+                align-items: center; 
+                width: 100%; }
+            #serviceForm .modal-content form .row-center .column-start { 
+                margin: 20px 0px 0px 0px;
+                width: 100%; }
+            #serviceForm .modal-content form .row-center .column-start input, #serviceForm .modal-content form .row-center .column-start textarea, #serviceForm .modal-content form .row-center .column-start .radioInput { width: 95%; }
+            #serviceForm .modal-content form .row-center .column-start label { width: 90%; }
+
+        /* EXPERIENCE */
+            #experience .container { width: 90%; }
+            #experience .container .experience { width: 100%; }
+            #experience .experience .basicInfo .textInfo { 
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start; }
+            #experience .experience .basicInfo .textInfo .experienceName { margin: 20px 30px 5px; }
+            #experience .experience .basicInfo .textInfo .experienceDate { margin: 5px 30px 20px; }
+            #experience .container .experience .extendedInfo { justify-content: space-between; }
+            #experience .container .experience .extendedInfo .info .externalInfo { margin-top: 0px; }
+            #experience .container .experience .extendedInfo .workInfo { 
+                flex-direction: column; 
+                align-items: flex-start;
+                width: 100%; }
+            #experience .container .experience .extendedInfo .textInfo { 
+                width: 85%;
+                font-size: 0.9em;
+                margin-top: 20px; }
+            #experience .container .experience .extendedInfo .workInfo .bx-link-external { margin-left: 0px; }
+            #experience .container .experience .extendedInfo .roundedExperiences { display: none; }
+            #experience .container .experience .extendedInfo .image { display: none; }
 
         /* CERTIFICATES */
             #certificates {
@@ -192,6 +404,14 @@
             #certificates .certificate .date p {
                 transform: rotate(0deg);
                 margin: 0px; }
+
+        /* PROJECTS */
+            .projectGrid { grid-template-columns: repeat(1, 1fr); }
+            #projects .project { width: 100%; }
+            #projects .project .icons span { font-size: 1.9em;}
+            #projects .project .downCard p { 
+                margin-top: 20px;
+                font-size: 1em; }
         
         /* FOOTER */
             footer { flex-direction: column-reverse !important; }
@@ -296,18 +516,25 @@
             /** Scroller **/
                 .scrolldown { transform: scale(0.5); }
 
+        /* LANDSCAPE */
+            #landscape { display: block; }
+
         /* ABOUT */
             #about img { display: none; }
-            #about #aboutInfo { width: 80vw; }
+            #about #aboutInfo { width: 90%; }
+            #about #aboutInfo p { padding: 0px; }
 
         /* SERVICES */
             #services { height: auto; }
+            .servicesGrid { grid-template-columns: repeat(1, 1fr); }
             #services div.row-space {
                 display: flex;
                 flex-direction: column;
                 justify-content: start;
                 align-items: center; }
-            #services .service { width: 90vw; }
+            #services .service { 
+                min-height: auto;
+                width: 90vw; }
             #services .service .imageCircle {
                 width: 5vw;
                 height: 5vw;
@@ -317,6 +544,49 @@
             #services .service .imageCircle img {
                 width: 2.5vw;
                 margin: 0 auto; }
+    
+        /* SERVICE FORM */
+            #serviceForm .modal-content { 
+                margin: 2% auto;
+                width: 90%; }
+            #serviceForm .modal-content #formInfo { 
+                justify-content: flex-start;
+                overflow-y: auto;
+                overflow-x: hidden; }
+            #serviceForm .modal-content form { width: 100%; }
+            #serviceForm .modal-content form .row-center { 
+                margin: 0px;
+                flex-direction: column;
+                align-items: center; 
+                width: 100%; }
+            #serviceForm .modal-content form .row-center .column-start { 
+                margin: 20px 0px 0px 0px;
+                width: 100%; }
+            #serviceForm .modal-content form .row-center .column-start input, #serviceForm .modal-content form .row-center .column-start textarea, #serviceForm .modal-content form .row-center .column-start .radioInput { width: 95%; }
+            #serviceForm .modal-content form .row-center .column-start label { width: 90%; }
+
+        /* EXPERIENCE */
+            #experience .container { width: 90%; }
+            #experience .container .experience { width: 100%; }
+            #experience .experience .basicInfo .textInfo { 
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start; }
+            #experience .experience .basicInfo .textInfo .experienceName { margin: 20px 30px 5px; }
+            #experience .experience .basicInfo .textInfo .experienceDate { margin: 5px 30px 20px; }
+            #experience .container .experience .extendedInfo { justify-content: space-between; }
+            #experience .container .experience .extendedInfo .info .externalInfo { margin-top: 0px; }
+            #experience .container .experience .extendedInfo .workInfo { 
+                flex-direction: column; 
+                align-items: flex-start;
+                width: 100%; }
+            #experience .container .experience .extendedInfo .textInfo { 
+                width: 85%;
+                font-size: 1em;
+                margin-top: 20px; }
+            #experience .container .experience .extendedInfo .workInfo .bx-link-external { margin-left: 0px; }
+            #experience .container .experience .extendedInfo .roundedExperiences { display: none; }
+            #experience .container .experience .extendedInfo .image { display: none; }
 
         /* CERTIFICATES */
             #certificates {
@@ -345,6 +615,14 @@
             #certificates .certificate .date p {
                 transform: rotate(0deg);
                 margin: 0px; }
+
+        /* PROJECTS */
+            .projectGrid { grid-template-columns: repeat(1, 1fr); }
+            #projects .project { width: 90vw; }
+            #projects .project .icons span { font-size: 1.8em;}
+            #projects .project .downCard p { 
+                margin-top: 10px;
+                font-size: 1.2em; }
 
         /* FOOTER */
             footer { flex-direction: column-reverse !important; }
@@ -438,18 +716,25 @@
                     display: block;
                     z-index: 999; }
 
+        /* LANSCAPE */
+            #landscape { display: block; }
+
         /* ABOUT */
             #about img { display: none; }
-            #about #aboutInfo { width: 70vw; }
+            #about #aboutInfo { width: 80%; }
+            #about #aboutInfo p { padding-left: 0px; }
 
         /* SERVICES */
             #services { height: auto; }
+            .servicesGrid { grid-template-columns: repeat(1, 1fr); }
             #services div.row-space {
                 display: flex;
                 flex-direction: column;
                 justify-content: start;
                 align-items: center; }
-            #services .service { width: 70vw; }
+            #services .service { 
+                min-height: auto;
+                width: 80vw; }
             #services .service .imageCircle {
                 width: 4vw;
                 height: 4vw;
@@ -459,6 +744,39 @@
             #services .service .imageCircle img {
                 width: 2vw;
                 margin: 0 auto; }
+            
+        /* SERVICE FORM */
+            #serviceForm .modal-content { 
+                margin: 2% auto;
+                width: 90%; }
+            #serviceForm .modal-content form { width: 100%; }
+            #serviceForm .modal-content form .row-center { 
+                flex-direction: row;
+                margin-top: 20px;
+                width: 100%; }
+            #serviceForm .modal-content form .row-center .column-start { width: 80%; }
+            #serviceForm .modal-content form .row-center .column-start input, #serviceForm .modal-content form .row-center .column-start textarea, #serviceForm .modal-content form .row-center .column-start .radioInput { width: 90%; }
+            #serviceForm .modal-content form .row-center .column-start label { width: 90%; }
+        
+        /* EXPERIENCE */
+            #experience .container .experience .extendedInfo .info .externalInfo { margin-top: 0px; }
+            #experience .experience .basicInfo .textInfo { 
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center; }
+            #experience .experience .basicInfo .textInfo .experienceName { margin: 15px 30px; }
+            #experience .experience .basicInfo .textInfo .experienceDate { margin: 0px 0px 0px; }
+            #experience .container .experience .extendedInfo { justify-content: space-between; }
+            #experience .container .experience .extendedInfo .textInfo { margin-top: 10px; }
+            #experience .container .experience .extendedInfo .workInfo .bx-link-external { margin-left: 30px; }
+            #experience .container .experience .extendedInfo .workInfo { 
+                flex-direction: row; 
+                align-items: center; }
+            #experience .container .experience .extendedInfo .roundedExperiences { 
+                display: flex;
+                margin-left: 10px;
+                transform: scale(0.9); }
+            #experience .container .experience .extendedInfo .image { display: none; }
 
         /* CERTIFICATES */
             #certificates {
@@ -484,6 +802,14 @@
             #certificates .certificate .date p {
                 transform: rotate(-90deg);
                 margin: 0px; }
+
+        /* PROJECTS */
+            .projectGrid { grid-template-columns: repeat(2, 1fr); }
+            #projects .project { width: 90%; }
+            #projects .project .icons span { font-size: 1.8em;}
+            #projects .project .downCard p { 
+                margin-top: 20px;
+                font-size: 1em; }
         
         /* FOOTER */
             footer { flex-direction: column-reverse !important; }
@@ -565,19 +891,28 @@
                     padding-top: 90px;
                     font-size: 8em; }
                 #rotative-text { font-size: 2.5em; }
+                
+        /* LANDSCAPE */
+            #landscape { display: block; }
 
         /* ABOUT */
             #about img { display: block; }
             #about #aboutInfo { width: 60vw; }
+            #about #aboutInfo p { padding-left: 40px; }
 
         /* SERVICES */
             #services { height: auto; }
+            .servicesGrid { grid-template-columns: repeat(1, 1fr); }
             #services div.row-space {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center; }
-            #services .service { width: 28vw; }
+            #services .service { 
+                margin: 25px auto;
+                min-height: auto;
+                height: auto;
+                width: 90%; }
             #services .service .imageCircle {
                 width: 2.5vw;
                 height: 2.5vw;
@@ -587,6 +922,25 @@
             #services .service .imageCircle img {
                 width: 1.3vw;
                 margin: 0 auto; }
+            
+        /* SERVICE FORM */
+            #serviceForm .modal-content { 
+                margin: 2% auto;
+                width: 80%; }
+            #serviceForm .modal-content form { width: 100%; }
+            #serviceForm .modal-content form .row-center { width: 100%; }
+            #serviceForm .modal-content form .row-center .column-start { width: 80%; }
+            #serviceForm .modal-content form .row-center .column-start input, #serviceForm .modal-content form .row-center .column-start textarea, #serviceForm .modal-content form .row-center .column-start .radioInput { width: 90%; }
+            #serviceForm .modal-content form .row-center .column-start label { width: 90%; }
+
+        /* EXPERIENCE */
+            #experience .container { width: 90%; }
+            #experience .container .experience { width: 90%; }
+            #experience .container .experience .extendedInfo { justify-content: center; }
+            #experience .container .experience .extendedInfo .roundedExperiences { 
+                margin-left: 50px;
+                transform: scale(1); }
+            #experience .container .experience .extendedInfo .image { display: flex; }
 
         /* CERTIFICATES */
             #certificates {
@@ -602,6 +956,13 @@
                 margin-top: 50px;
                 margin-right: 20px;
                 transform: rotate(0deg); }
+
+        /* PROJECTS */
+            .projectGrid { grid-template-columns: repeat(2, 1fr); }
+            #projects .project .icons span { font-size: 2.4em;}
+            #projects .project .downCard p { 
+                margin-top: 20px;
+                font-size: 1.2em; }
 
         /* FOOTER */
             footer { 
@@ -654,6 +1015,42 @@
     }
 
     @media only screen and (min-width: 1440px) {
+        /* LANDSCAPE */
+            #landscape { display: block; }
+
+        /* ABOUT */
+            #about img { display: block; }
+            #about #aboutInfo { width: 50vw; }
+            #about #aboutInfo p { padding-left: 40px; }
+
+        /* SERVICES */
+            .servicesGrid { grid-template-columns: repeat(3, 1fr); }
+            .service {
+                min-height: 55vh;
+                width: 28vw; }
+            
+        /* SERVICE FORM */
+            #serviceForm .modal-content { 
+                margin: 8% auto;
+                width: 80%; }
+            #serviceForm .modal-content form { width: 100%; }
+            #serviceForm .modal-content form .row-center { width: 100%; }
+            #serviceForm .modal-content form .row-center .column-start { width: 80%; }
+            #serviceForm .modal-content form .row-center .column-start input, #serviceForm .modal-content form .row-center .column-start textarea, #serviceForm .modal-content form .row-center .column-start .radioInput { width: 90%; }
+            #serviceForm .modal-content form .row-center .column-start label { width: 90%; }
+
+        /* EXPERIENCE */
+            #experience .container { width: 80%; }
+            #experience .container .experience { width: 60vw; }
+            #experience .container .experience .extendedInfo { justify-content: center; }
+            #experience .container .experience .extendedInfo .roundedExperiences { 
+                margin-left: 50px;
+                transform: scale(1); }
+            #experience .container .experience .extendedInfo .image { display: flex; }
+
+        /* PROJECTS */
+            .projectGrid { grid-template-columns: repeat(3, 1fr); }
+
         /* FOOTER */
             footer .footerInfo h2 { 
                 margin-left: 90px;
@@ -672,6 +1069,5 @@
                 align-items: flex-end !important;
                 margin-top: 0px; }
             footer .footerContact .row-center .right_input label { margin-right: 30px; }
-                
     }
 

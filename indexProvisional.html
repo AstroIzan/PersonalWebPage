@@ -1,0 +1,813 @@
+<!-- <script>
+    window.open("html-php/workInProgress.html", "_self")
+</script> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/astrap.css">
+    <link rel="stylesheet" href="css/mediaQueries.css">
+    <link rel="icon" href="img/logo.png" type="image/gif" sizes="16x16">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Izan Estirado Alfaro</title>
+</head>
+<body>
+    <div id="available">
+        <header id="home">
+            <nav id="menu" class="column-center">
+                <ul id="menuUl" class="row-center m-0 p-0">
+                    <li><a onclick="dropMenu()" href="#home"><span>01</span>Home</a></li>
+                    <li><a onclick="dropMenu()" href="#about"><span>02</span>About</a></li>
+                    <li><a onclick="dropMenu()" href="#services"><span>03</span>Services</a></li>
+                    <li><a onclick="dropMenu()" href="#experience"><span>04</span>Experience</a></li>
+                    <li><a onclick="dropMenu()" href="#projects"><span>05</span>Projects</a></li>
+                    <li><a onclick="dropMenu()" href="#contact"><span>06</span>Contact</a></li>
+                </ul>
+                <div class="burger" id="burger" onclick="dropMenu();">
+                    <div id="line1"></div>
+                    <div id="line2"></div>
+                    <div id="line3"></div>
+                </div>
+            </nav>
+            <div class="container column-center">
+                <div id="pageTitle" class="pt-5 column-center">
+                    <h1 class="pt-5 column-center">Izan<span>Estirado</span></h1>
+                    <p class="m-0" id="rotative-text">Web Developer</p>
+                </div>
+                <div class='scrolldown mb-1'>
+                    <a href="#about" class="mouse"></a>
+                    <p class="text">Scroll</p>
+                </div>              
+            </div>
+        </header>
+        <section id="landscape">
+            <h2 style="display: none;">Landscape Image</h2>
+        </section>
+        <section id="about" class="pt-5">
+            <div class="container column-start">
+                <h2 class="mt-5">About Me</h2>
+                <div class="row-space-all">
+                    <img src="src/about.png" alt="A rounded image of me" class="mt-3">
+                    <div id="aboutInfo" class="column-center">
+                        <p class="pl-4">Hi. Nice to meet you! My name is Izan Estirado Alfaro.<br> I am 20 years old, I am a Systems Technician and a Senior Technician in 
+                            Application Development from the <a href="https://www.jviladoms.cat/ca">Jaume Viladoms Institute</a>. Currently, I am studying Physics at <a href="https://www.uned.es/universidad/inicio.html">UNED</a>. I am a great fan of nature, music, astrophysics 
+                            and technology. Self-taught and enthusiastic, eager to continue learning!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="services" class="column-center">
+            <h2 class="mt-5">Services</h2>
+            <p class="column-center">I offer services as a freelance, to be able to develop my knowledge in new projects</p>
+            <div class="servicesGrid">
+                <div class="mt-5 service">
+                    <h3 class="ml-2 mt-2">Web or Database Design</h3>
+                    <div class="row-start mt-1">
+                        <div class="ml-2 imageCircle column-center">
+                            <img src="src/services/web-design/figma.png" alt="FIGMA logo image">
+                        </div>
+                        <div class="ml-1 imageCircle column-center">
+                            <img src="src/services/web-design/creativeCloud.png" alt="CreativeCloud logo image">
+                        </div>
+                        <div class="ml-1 imageCircle column-center">
+                            <img src="src/services/web-design/mysql.png" alt="My SQL logo image">
+                        </div>
+                    </div>
+                    <p class="ml-2">We take your requirements, iterate, and make them real! Database or Web design, with every different applications or languages.</p>
+                    <div class="line"></div>
+                    <ul class="p-0 ml-2">
+                        <li class="mb-2 row-start"><span class='bx bx-collapse-alt'></span>High-fidelity designs in Figma or Adobe XD</li>
+                        <li class="mb-2 row-start"><span class='bx bx-collapse-alt'></span>Consultation on existing design</li>
+                        <li class="mb-2 row-start"><span class='bx bx-collapse-alt'></span>Complete database design</li>
+                        <li class="mb-2 row-start">
+                            <span class='bx bx-calculator'></span>
+                            <div class="serviceLink">
+                                <a onclick="showForm()" class="">Get a quote for your project</a>
+                                <div class="serviceLine"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-5 service">
+                    <h3 class="ml-2 mt-2">Web Development</h3>
+                    <div class="row-start mt-1">
+                        <div class="ml-2 imageCircle column-center">
+                            <img src="src/services/web-development/html.png" alt="HTML logo image">
+                        </div>
+                        <div class="ml-1 imageCircle column-center">
+                            <img src="src/services/web-development/css.png" alt="CSS logo image">
+                        </div>
+                        <div class="ml-1 imageCircle column-center">
+                            <img src="src/services/web-development/bootstrap.png" alt="Bootstrap logo image">
+                        </div>
+                        <div class="ml-1 imageCircle column-center">
+                            <img src="src/services/web-development/js.png" alt="JS logo image">
+                        </div>
+                        <div class="ml-1 imageCircle column-center">
+                            <img src="src/services/web-development/angular.png" alt="Angular logo image">
+                        </div>
+                        <div class="ml-1 imageCircle column-center">
+                            <img src="src/services/web-development/php.png" alt="PHP logo image">
+                        </div>
+                        <div class="ml-1 imageCircle column-center">
+                            <img src="src/services/web-development/codeIgniter.png" alt="Code Igniter logo image">
+                        </div>
+                    </div>
+                    <p class="ml-2">Web development, adapted to your needs and your design, with a wide variety of languages and integration with different frameworks</p>
+                    <div class="line"></div>
+                    <ul class="p-0 ml-2">
+                        <li class="mb-2 row-start"><span class='bx bx-collapse-alt'></span>Custom code enhancements</li>
+                        <li class="mb-2 row-start"><span class='bx bx-collapse-alt'></span>Responsive design</li>
+                        <li class="mb-2 row-start"><span class='bx bx-collapse-alt'></span>Interactions and animations</li>
+                        <li class="mb-2 row-start"><span class='bx bx-collapse-alt'></span>Digital Marketing and Customer Experience Integrations</li>
+                        <li class="mb-2 row-start">
+                            <span class='bx bx-calculator'></span>
+                            <div class="serviceLink">
+                                <a onclick="showForm()" class="">Get a quote for your project</a>
+                                <div class="serviceLine"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-5 service">
+                    <h3 class="ml-2 mt-2">Game Development</h3>
+                    <div class="row-start mt-1">
+                        <div class="ml-2 imageCircle column-center">
+                            <img src="src/services/game-development/unity.png" alt="Unity logo image">
+                        </div>
+                        <div class="ml-1 imageCircle column-center">
+                            <img src="src/services/game-development/c.png" alt="C# logo image">
+                        </div>
+                        <div class="ml-1 imageCircle column-center">
+                            <img src="src/services/game-development/aseprite.png" alt="Aseprite logo image">
+                        </div>
+                        <div class="ml-1 imageCircle column-center">
+                            <img src="src/services/game-development/creativeCloud.png" alt="CreativeCloud logo image">
+                        </div>
+                    </div>
+                    <p class="ml-2">Development of 2D or 3D video games in unity. With complete design of sprites and clean code on C#.</p>
+                    <div class="line"></div>
+                    <ul class="p-0 ml-2">
+                        <li class="mb-2 row-start"><span class='bx bx-collapse-alt'></span>High-fidelity development in C#</li>
+                        <li class="mb-2 row-start"><span class='bx bx-collapse-alt'></span>Consultation on existing design</li>
+                        <li class="mb-2 row-start"><span class='bx bx-collapse-alt'></span>Clean code development</li>
+                        <li class="mb-2 row-start"><span class='bx bx-collapse-alt'></span>BUGs maintence</li>
+                        <li class="mb-2 row-start">
+                            <span class='bx bx-calculator'></span>
+                            <div class="serviceLink">
+                                <a onclick="showForm()" class="">Get a quote for your project</a>
+                                <div class="serviceLine"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="serviceForm" class="modal">
+                <div class="modal-content">
+                    <span onclick="closeModal();" class="close column-start"><i class='bx bx-collapse-alt'></i></span>
+                    <div id="formInfo" class="column-center">
+                        <h3>Get a quote for your project</h3>
+                        <p>Share a few details about your project for a free discovery call</p>
+                        <form action="">
+                            <div class="mt-1 row-center">
+                                <div class="column-start">
+                                    <label for="name">Full Name</label>
+                                    <input type="text" name="name" id="name" placeholder="Your name" required>
+                                </div>
+                                <div class="ml-2 column-start">
+                                    <label for="email">Email</label>
+                                    <input type="email" name="email" id="email" placeholder="Ex. izan2003@gmail.com" required>
+                                </div>
+                            </div>
+                            <div class="mt-2 row-center">
+                                <div class="column-start">
+                                    <label for="brandName">Brand Name</label>
+                                    <input type="text" name="brandName" id="brandName" placeholder="Ex. Team Cherry">
+                                </div>
+                                <div class="ml-2 column-start">
+                                    <label for="website">Website</label>
+                                    <input type="text" name="website" id="website" placeholder="Ex. https://izanestirado.es/">
+                                </div>
+                            </div>
+                            <div class="mt-2 row-center">
+                                <div class="column-start">
+                                    <label for="description">Tell me a bit about your project</label>
+                                    <textarea name="description" id="description" cols="30" rows="10" placeholder="What are you thinking?" required></textarea>
+                                </div>
+                                <div class="ml-2 column-start">
+                                    <label for="budget">How much are you investing?</label>
+                                    <p onclick="selectButton(0)" class="radioInput column-center not-selected">€100 - €500</p>
+                                    <p onclick="selectButton(1)" class="radioInput column-center not-selected">€500 - €1000</p>
+                                    <p onclick="selectButton(2)" class="radioInput column-center not-selected">€1000 +</p>
+                                </div>
+                            </div>
+                            <div class="row-end mt-2">
+                                <button class="serviceLink">
+                                    <a onclick="sendForm()" class="">Send Quote</a>
+                                    <div class="serviceLine"></div>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="experience" class="pt-1">
+            <div class="container column-center">
+                <h2>Experience</h2>
+                <div class="experience column-center mt-3" onclick="dropExperience(0)">
+                    <div class="basicInfo row-space-all">
+                        <div class="textInfo row-space-all">
+                            <p class="experienceName ml-3">General Services -- Hospital Parc Tauli</p>
+                            <p class="experienceDate mr-2">2023 - 2023</p>
+                        </div>
+                        <span class='experienceButton bx bx-plus mr-2'></span>
+                    </div>
+                    <div class="extendedInfo mt-1 row-center">
+                        <div class="info column-center">
+                            <div class="externalInfo row-start w-100 mt-2 ml-5">
+                                <div class="workInfo row-start m-0">
+                                    <div class="row-start">
+                                        <span class='bx bx-pin mr-1'></span>
+                                        <p class="">Sabadell, Barcelona, Spain</p>
+                                    </div>
+                                    <div class="row-start">
+                                        <span class='ml-3 mr-1 bx bx-link-external' ></span>
+                                        <div class="serviceLink">
+                                            <a href="https://www.tauli.cat/tauli/" target="_blank" class="">tauli.cat</a>
+                                            <div class="serviceLine"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="textInfo row-start w-100 mt-2 ml-5">
+                                <p class="m-0">Technician in waste management and cleaning in the general services position in the hospital.</p>
+                            </div>
+                            <div class="roundedExperiences row-start w-100 mt-2 mb-2 ml-5">
+                                <p class="roundedExperience p-1 m-0 ml-1 mr-1">Teamwork</p>
+                                <p class="roundedExperience p-1 m-0 ml-1 mr-1">Communication</p>
+                                <p class="roundedExperience p-1 m-0 ml-1 mr-1">Organization</p>
+                                <p class="roundedExperience p-1 m-0 ml-1 mr-1">Responsibility</p>
+                            </div>
+                        </div>
+                        <div class="image m-2 column-center">
+                            <img class="ml-3" src="src/experience/tauli.jpg" alt="Education department of catalonia logo">
+                        </div>
+                    </div>
+                </div>
+                <div class="experience column-center mt-1" onclick="dropExperience(1)">
+                    <div class="basicInfo row-space-all">
+                        <div class="textInfo row-space-all">
+                            <p class="experienceName ml-3">Software Developer Trainee -- Compettia</p>
+                            <p class="experienceDate mr-2">2022 - 2023</p>
+                        </div>
+                        <span class='experienceButton bx bx-plus mr-2'></span>
+                    </div>
+                    <div class="extendedInfo mt-1 row-center">
+                        <div class="info column-center">
+                            <div class="externalInfo row-start w-100 mt-2 ml-5">
+                                <div class="workInfo row-start m-0">
+                                    <div class="row-start">
+                                        <span class='bx bx-pin mr-1'></span>
+                                        <p class="">Sant Cugat del Valles, Spain</p>
+                                    </div>
+                                    <div class="row-start">
+                                        <span class='ml-3 mr-1 bx bx-link-external' ></span>
+                                        <div class="serviceLink">
+                                            <a href="https://www.compettia.com/" target="_blank" class="">compettia.com</a>
+                                            <div class="serviceLine"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="textInfo row-start w-100 mt-2 ml-5">
+                                <p class="m-0">Programming in C# and MySQL, creation of TDDs, development and code implementation and error handling. </p>
+                            </div>
+                            <div class="roundedExperiences row-start w-100 mt-2 mb-2 ml-5">
+                                <p class="roundedExperience p-1 m-0 ml-1 mr-1">C#</p>
+                                <p class="roundedExperience p-1 m-0 ml-1 mr-1">SQL Server</p>
+                                <p class="roundedExperience p-1 m-0 ml-1 mr-1">TDD</p>
+                                <p class="roundedExperience p-1 m-0 ml-1 mr-1">.NET</p>
+                                <p class="roundedExperience p-1 m-0 ml-1 mr-1">ASP.NET</p>
+                                <p class="roundedExperience p-1 m-0 ml-1 mr-1">MVC</p>
+                            </div>
+                        </div>
+                        <div class="image m-2 column-center">
+                            <img class="ml-3" src="src/experience/compettia.jpg" alt="Compettia logo image">
+                        </div>
+                    </div>
+                </div>
+                <div class="experience column-center mt-1" onclick="dropExperience(2)">
+                    <div class="basicInfo row-space-all">
+                        <div class="textInfo row-space-all">
+                            <p class="experienceName ml-3">General Services -- Hospital Parc Tauli</p>
+                            <p class="experienceDate mr-2">2021 - 2022</p>
+                        </div>
+                        <span class='experienceButton bx bx-plus mr-2'></span>
+                    </div>
+                    <div class="extendedInfo mt-1 row-center">
+                        <div class="info column-center">
+                            <div class="externalInfo row-start w-100 mt-2 ml-5">
+                                <div class="workInfo row-start m-0">
+                                    <div class="row-start">
+                                        <span class='bx bx-pin mr-1'></span>
+                                        <p class="">Sabadell, Barcelona, Spain</p>
+                                    </div>
+                                    <div class="row-start">
+                                        <span class='ml-3 mr-1 bx bx-link-external' ></span>
+                                        <div class="serviceLink">
+                                            <a href="https://www.tauli.cat/tauli/" target="_blank" class="">tauli.cat</a>
+                                            <div class="serviceLine"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="textInfo row-start w-100 mt-2 ml-5">
+                                <p class="m-0">Transports and places all the textile product in its corresponding places and other services of a general nature required in a hospital.</p>
+                            </div>
+                            <div class="roundedExperiences row-start w-100 mt-2 mb-2 ml-5">
+                                <p class="roundedExperience p-1 m-0 ml-1 mr-1">Teamwork</p>
+                                <p class="roundedExperience p-1 m-0 ml-1 mr-1">Communication</p>
+                                <p class="roundedExperience p-1 m-0 ml-1 mr-1">Organization</p>
+                                <p class="roundedExperience p-1 m-0 ml-1 mr-1">Responsibility</p>
+                            </div>
+                        </div>
+                        <div class="image m-2 column-center">
+                            <img class="ml-3" src="src/experience/tauli.jpg" alt="Education department of catalonia logo">
+                        </div>
+                    </div>
+                </div>
+                <div class="experience column-center mt-1" onclick="dropExperience(3)">
+                    <div class="basicInfo row-space-all">
+                        <div class="textInfo row-space-all">
+                            <p class="experienceName ml-3">Computer Technician -- INS Polinya</p>
+                            <p class="experienceDate mr-2">2020 - 2021</p>
+                        </div>
+                        <span class='experienceButton bx bx-plus mr-2'></span>
+                    </div>
+                    <div class="extendedInfo mt-1 row-center">
+                        <div class="info column-center">
+                            <div class="externalInfo row-start w-100 mt-2 ml-5">
+                                <div class="workInfo row-start m-0">
+                                    <div class="row-start">
+                                        <span class='bx bx-pin mr-1'></span>
+                                        <p class="">Polinyà, Barcelona, Spain</p>
+                                    </div>
+                                    <div class="row-start">
+                                        <span class='ml-3 mr-1 bx bx-link-external' ></span>
+                                        <div class="serviceLink">
+                                            <a href="https://agora.xtec.cat/iespolinya/" target="_blank" class="">agora.xtec.cat/iespolinya</a>
+                                            <div class="serviceLine"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="textInfo row-start w-100 mt-2 ml-5">
+                                <p class="m-0">Hardware and software technician at the Polinyà Institute during the internship period of the intermediate training cycle.</p>
+                            </div>
+                            <div class="roundedExperiences row-start w-100 mt-2 mb-2 ml-5">
+                                <p class="roundedExperience p-1 m-0 ml-1 mr-1">Hardware</p>
+                                <p class="roundedExperience p-1 m-0 ml-1 mr-1">Software</p>
+                                <p class="roundedExperience p-1 m-0 ml-1 mr-1">Networks</p>
+                                <p class="roundedExperience p-1 m-0 ml-1 mr-1">Windows</p>
+                                <p class="roundedExperience p-1 m-0 ml-1 mr-1">Linux</p>
+                                <p class="roundedExperience p-1 m-0 ml-1 mr-1">Office</p>
+                            </div>
+                        </div>
+                        <div class="image m-2 column-center">
+                            <img class="ml-3" src="src/experience/ins_polinya.png" alt="Education department of catalonia logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 class="pt-5 column-center">Certificates</h2>
+            <div id="certificates">
+                <div class="certificate row-start mt-2">
+                    <div class="date column-start">
+                        <p class="m-2 mt-4">June 2022</p>
+                    </div>
+                    <div class="certificateInfo column-start">
+                        <h3 class="mt-2">2019 Windows Server Adminsitration</h3>
+                        <h4 class="m-0 highOp">Microsoft Imagine Academy</h4>
+                        <p class="m-0 highOp">Sistem Administrator</p>
+                        <p class="info">
+                            Control, manage and maintain the Windows Server 2019 operating system, 
+                            as well as the services and resources that are part of it.
+                        </p>
+                        <div class="roundedValues row-start">
+                            <p class="p-1 ml-1 roundedCertificate">Microsoft</p>
+                            <p class="p-1 ml-1 roundedCertificate">Windows Server</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="certificate row-start mt-2">
+                    <div class="date column-start">
+                        <p class="m-2 mt-4">May 2023</p>
+                    </div>
+                    <div class="certificateInfo column-start">
+                        <h3 class="mt-2">Database Design and Programming <br>with SQL</h3>
+                        <h4 class="m-0 highOp">Oracle Academy</h4>
+                        <p class="m-0 highOp">Database Administrator</p>
+                        <p class="info"> 
+                            Design and program databases with SQL, 
+                            as well as manage and maintain them.
+                        </p>
+                        <div class="roundedValues row-start">
+                            <p class="p-1 ml-1 roundedCertificate">Oracle</p>
+                            <p class="p-1 ml-1 roundedCertificate">SQL</p>
+                            <p class="p-1 ml-1 roundedCertificate">Database</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="certificate row-start mt-2">
+                    <div class="date column-start">
+                        <p class="m-2 mt-4">May 2023</p>
+                    </div>
+                    <div class="certificateInfo column-start">
+                        <h3 class="mt-2">Database programming with PL/SQL</h3>
+                        <h4 class="m-0 highOp">Oracle Academy</h4>
+                        <p class="m-0 highOp">Database Administrator</p>
+                        <p class="info"> 
+                            Design and program databases with SQL, 
+                            as well as manage and maintain them.
+                        </p>
+                        <div class="roundedValues row-start">
+                            <p class="p-1 ml-1 roundedCertificate">Oracle</p>
+                            <p class="p-1 ml-1 roundedCertificate">SQL</p>
+                            <p class="p-1 ml-1 roundedCertificate">PL/SQL</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="certificate row-start mt-2">
+                    <div class="date column-start">
+                        <p class="m-2 mt-4">May 2023</p>
+                    </div>
+                    <div class="certificateInfo column-start">
+                        <h3 class="mt-2">Java Fundamentals</h3>
+                        <h4 class="m-0 highOp">Oracle Academy</h4>
+                        <p class="m-0 highOp">Developer</p>
+                        <p class="info"> 
+                            Knowledges about Java programming language and his Fundamentals.
+                        </p>
+                        <div class="roundedValues row-start">
+                            <p class="p-1 ml-1 roundedCertificate">Oracle</p>
+                            <p class="p-1 ml-1 roundedCertificate">Java</p>
+                            <p class="p-1 ml-1 roundedCertificate">Programming</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="certificate row-start mt-2">
+                    <div class="date column-start">
+                        <p class="m-2 mt-4">May 2023</p>
+                    </div>
+                    <div class="certificateInfo column-start">
+                        <h3 class="mt-2">Java Programming</h3>
+                        <h4 class="m-0 highOp">Oracle Academy</h4>
+                        <p class="m-0 highOp">Developer</p>
+                        <p class="info"> 
+                            Knowledges about Java programming language and his Fundamentals.
+                        </p>
+                        <div class="roundedValues row-start">
+                            <p class="p-1 ml-1 roundedCertificate">Oracle</p>
+                            <p class="p-1 ml-1 roundedCertificate">Java</p>
+                            <p class="p-1 ml-1 roundedCertificate">Programming</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="certificate row-start mt-2">
+                    <div class="date column-start">
+                        <p class="m-2 mt-4">May 2020</p>
+                    </div>
+                    <div class="certificateInfo column-start">
+                        <h3 class="mt-2">IT Essentials</h3>
+                        <h4 class="m-0 highOp">Cisco Academy</h4>
+                        <p class="m-0 highOp">Sistem Administrator</p>
+                        <p class="info"> 
+                            Knowledges about computer hardware and software, 
+                            as well as operating systems and networks.
+                        </p>
+                        <div class="roundedValues row-start">
+                            <p class="p-1 ml-1 roundedCertificate">Cisco</p>
+                            <p class="p-1 ml-1 roundedCertificate">Hardware</p>
+                            <p class="p-1 ml-1 roundedCertificate">Networks</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="certificate row-start mt-2">
+                    <div class="date column-start">
+                        <p class="m-2 mt-4">Nov 2019</p>
+                    </div>
+                    <div class="certificateInfo column-start">
+                        <h3 class="mt-2">Office Word 2013 Specialist</h3>
+                        <h4 class="m-0 highOp">Microsoft Office Academy</h4>
+                        <p class="m-0 highOp">Office Specialist</p>
+                        <p class="info"> 
+                            Knowledges about computer hardware and software, 
+                            as well as operating systems and networks.
+                        </p>
+                        <div class="roundedValues row-start">
+                            <p class="p-1 ml-1 roundedCertificate">Microsoft</p>
+                            <p class="p-1 ml-1 roundedCertificate">Office</p>
+                            <p class="p-1 ml-1 roundedCertificate">Word</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="certificate row-start mt-2">
+                    <div class="date column-start">
+                        <p class="m-2 mt-4">Nov 2019</p>
+                    </div>
+                    <div class="certificateInfo column-start">
+                        <h3 class="mt-2">Discovering the Internet of Things<br> Through Arduino</h3>
+                        <h4 class="m-0 highOp">University Pompeu Fabra</h4>
+                        <p class="m-0 highOp">Sistem Administrator & Developer</p>
+                        <p class="info"> 
+                            Knowledges about computer hardware and software, 
+                            as well as operating systems and networks.
+                        </p>
+                        <div class="roundedValues row-start">
+                            <p class="p-1 ml-1 roundedCertificate">Arduino</p>
+                            <p class="p-1 ml-1 roundedCertificate">C++</p>
+                            <p class="p-1 ml-1 roundedCertificate">Networks</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projects" class="column-center">
+            <h2 class="mt-5">Projects</h2>
+            <div class="projectGrid">
+                <div class="project">
+                    <div class="upCard column-center">
+                        <h5>Minicraft</h5>
+                        <p class="category">Game Development</p>
+                        <div class="icons row-space-all">
+                            <span class='arrow bx bx-chevrons-down' ></span>
+                            <div class="row-end">
+                                <span class='bx bxl-java'></span>
+                                <span class='bx bxl-github' ></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="downCard column-center">
+                        <p class="info">Minicraft was my first game, designed entirely in Java, with a 2D aesthetic and simple mechanics.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="upCard column-center">
+                        <h5>Pokinator</h5>
+                        <p class="category">Full-Stack Development</p>
+                        <div class="icons row-space-all">
+                            <span class='arrow bx bx-chevrons-down' ></span>
+                            <div class="row-end">
+                                <span class='bx bxl-html5' ></span>
+                                <span class='bx bxl-css3' ></span>
+                                <span class='bx bxl-javascript' ></span>
+                                <span class='bx bxl-php' ></span>
+                                <span class='bx bxs-data' ></span>
+                                <span class='bx bxl-git' ></span>
+                                <span class='bx bxl-github' ></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="downCard column-center">
+                        <p class="info">Pokinator is one of the projects that I am most proud of, where I made the well-known game Akinator together with my colleagues but with Pokemons, with incredible aesthetics and gameplay.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="upCard column-center">
+                        <h5>Oasis</h5>
+                        <p class="category">Game & Web Development</p>
+                        <div class="icons row-space-all">
+                            <span class='arrow bx bx-chevrons-down' ></span>
+                            <div class="row-end">
+                                <span class='bx bxl-unity' ></span>
+                                <span class='bx bxl-c-plus-plus' ></span>
+                                <span class='bx bxl-html5' ></span>
+                                <span class='bx bxl-css3' ></span>
+                                <span class='bx bxl-javascript' ></span>
+                                <span class='bx bxl-git' ></span>
+                                <span class='bx bxl-github' ></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="downCard column-center">
+                        <p class="info">Oasis was my first serious project, where I developed with my partner an Alpha of a game in Unity with all the necessary infrastructure to be launched on the market.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="upCard column-center">
+                        <h5>Elixeum</h5>
+                        <p class="category">Web Development</p>
+                        <div class="icons row-space-all">
+                            <span class='arrow bx bx-chevrons-down' ></span>
+                            <div class="row-end">
+                                <span class='bx bxl-html5' ></span>
+                                <span class='bx bxl-css3' ></span>
+                                <span class='bx bxl-github' ></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="downCard column-center">
+                        <p class="info">Elixeum was my first website, made during the final project of my intermediate degree in microcomputing and networks, with a simple aesthetic.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="upCard column-center">
+                        <h5>Shinkansen</h5>
+                        <p class="category">Full-Stack Development</p>
+                        <div class="icons row-space-all">
+                            <span class='arrow bx bx-chevrons-down' ></span>
+                            <div class="row-end">
+                                <span class='bx bxl-html5' ></span>
+                                <span class='bx bxl-css3' ></span>
+                                <span class='bx bxl-javascript' ></span>
+                                <span class='bx bxl-github' ></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="downCard column-center">
+                        <p class="info">Shinkansen was a simple app for making train seat reservations, with a unique and lively aesthetic.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="upCard column-center">
+                        <h5>FireBnB</h5>
+                        <p class="category">Web Development</p>
+                        <div class="icons row-space-all">
+                            <span class='arrow bx bx-chevrons-down' ></span>
+                            <div class="row-end">
+                                <span class='bx bxl-html5' ></span>
+                                <span class='bx bxl-css3' ></span>
+                                <span class='bx bxl-javascript' ></span>
+                                <span class='bx bxl-github' ></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="downCard column-center">
+                        <p class="info">FireBnB is a hotel room reservation page, which offers you discretion for those more naughty people.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="projectGrid" id="dropProjects">
+                <div class="project">
+                    <div class="upCard column-center">
+                        <h5>Halloween</h5>
+                        <p class="category">Web Development</p>
+                        <div class="icons row-space-all">
+                            <span class='arrow bx bx-chevrons-down' ></span>
+                            <div class="row-end">
+                                <span class='bx bxl-html5' ></span>
+                                <span class='bx bxl-css3' ></span>
+                                <span class='bx bxl-bootstrap' ></span>
+                                <span class='bx bxl-github' ></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="downCard column-center">
+                        <p class="info">Halloween was a class project where we started using bootstrap, as you can see, with a very good result.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="upCard column-center">
+                        <h5>Examen Generator</h5>
+                        <p class="category">Full-Stack Development</p>
+                        <div class="icons row-space-all">
+                            <span class='arrow bx bx-chevrons-down' ></span>
+                            <div class="row-end">
+                                <span class='bx bxl-html5' ></span>
+                                <span class='bx bxl-css3' ></span>
+                                <span class='bx bxl-javascript' ></span>
+                                <span class='bx bxl-php' ></span>
+                                <span class='bx bxl-github' ></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="downCard column-center">
+                        <p class="info">This page is easy to use, generate exams quickly and easily in order to make the work of teachers easier.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="upCard column-center">
+                        <h5>Minesweeper</h5>
+                        <p class="category">Full-Stack Development</p>
+                        <div class="icons row-space-all">
+                            <span class='arrow bx bx-chevrons-down' ></span>
+                            <div class="row-end">
+                                <span class='bx bxl-html5' ></span>
+                                <span class='bx bxl-css3' ></span>
+                                <span class='bx bxl-javascript' ></span>
+                                <span class='bx bxl-github' ></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="downCard column-center">
+                        <p class="info">It is a simple game in pure minesweeper style but with a touch of black humor.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="upCard column-center">
+                        <h5>Animations</h5>
+                        <p class="category">Web Development</p>
+                        <div class="icons row-space-all">
+                            <span class='arrow bx bx-chevrons-down' ></span>
+                            <div class="row-end">
+                                <span class='bx bxl-html5' ></span>
+                                <span class='bx bxl-css3' ></span>
+                                <span class='bx bxl-github' ></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="downCard column-center">
+                        <p class="info">I simple try of use different animations in a web development.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="upCard column-center">
+                        <h5>Enterprise</h5>
+                        <p class="category">Web Development</p>
+                        <div class="icons row-space-all">
+                            <span class='arrow bx bx-chevrons-down' ></span>
+                            <div class="row-end">
+                                <span class='bx bxl-html5' ></span>
+                                <span class='bx bxl-css3' ></span>
+                                <span class='bx bxl-bootstrap' ></span>
+                                <span class='bx bxl-github' ></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="downCard column-center">
+                        <p class="info">A simple examen for class where i used Boottrap in a efficient mode.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="showMoreProjects row-center" onclick="showMoreProject()">
+                <span class='bx bxs-chevrons-down bx-tada' name="dropProjectsArrows" ></span>
+                <p id="dropProjectsText" class="m-1">Show more projects</p>
+                <span class='bx bxs-chevrons-down bx-tada' name="dropProjectsArrows" ></span>
+            </div>
+        </section>
+        <footer id="contact" class="row-center">
+            <div class="footerInfo column-start">
+                <h2 class="pt-5">Available for select <br>freelance opportunities</h2>
+                <p class="pl-3">Have an exciting project you need<br>help with?<br>Send me an email or contact me via<br>instant message!</p>
+                <div class="rrss column-start pb-5 pl-2">
+                    <div class="row-start p-1" onclick="redirect('instagram')">
+                        <span class='bx bxl-instagram mr-1'></span>
+                        <a href="https://www.instagram.com/astro_izan/" target="_blank" class="">@AstroIzan</a>
+                    </div>
+                    <div class="row-start p-1" onclick="redirect('linkedin')">
+                        <span class='bx bxl-linkedin mr-1'></span>
+                        <a href="https://www.linkedin.com/in/izan-estirado-alfaro-6871a016b/" target="_blank" class="">@IzanEstiradoAlfaro</a>
+                    </div>
+                    <div class="row-start p-1" onclick="redirect('github')">
+                        <span class='bx bxl-github mr-1'></span>
+                        <a href="https://github.com/AstroIzan" target="_blank" class="">@AstroIzan</a>
+                    </div>
+                    <div class="row-start p-1" onclick="redirect('email')">
+                        <span class='bx bx-envelope mr-1'></span>
+                        <a href="mailto:izan2003@gmail.com" class="">izan2003@gmail.com</a>
+                    </div>
+                    <div class="row-start p-1" onclick="redirect('tlf')">
+                        <span class='bx bx-phone mr-1'></span>
+                        <a href="tel:+34722728925" class="">722 72 89 25</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footerContact column-center">
+                <h2>Contact Form</h2>
+                <p>Send me a message and I will get back to you as soon as possible!</p>
+                <form action="" class="column-center">
+                    <div class="row-center mt-1">
+                        <div class="column-start">
+                            <label for="name" class="pl-3">Full Name</label>
+                            <input type="text" name="name" id="name" placeholder="Your name" required>
+                        </div>
+                        <div class="column-start right_input">
+                            <label for="email" class="pl-5">Email</label>
+                            <input type="email" name="email" id="email" placeholder="Ex. izan2003@gmail.com" required>
+                        </div>
+                    </div>
+                    <div class="column-start">
+                        <label for="subject" class="pl-3 mt-1">Subject</label>
+                        <input type="text" name="subject" id="subject" placeholder="Ex. Web Design" required>
+                    </div>
+                    <div class="column-start">
+                        <label for="message" class="pl-3 mt-1">Message</label>
+                        <textarea class="pt-1" name="message" id="message" cols="40" rows="8" placeholder="What are you thinking?" required></textarea>
+                    </div>
+                    <div class="column-end">
+                        <input type="submit" value="Send Message" class="mt-1">
+                    </div>
+                </form>
+            </div>
+        </footer>
+        <script src="js/script.js"></script>
+        <script src="https://kit.fontawesome.com/b55cd54a84.js" crossorigin="anonymous"></script>
+    </div>
+    <div id="not-available" class="column-center">
+        <h1>Display not available</h1>
+        <p>Sorry, this page is not available for devices of this size, please try on a slightly larger device.</p>    
+    </div>
+</body>
+</html>
