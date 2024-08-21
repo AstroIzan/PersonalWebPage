@@ -119,20 +119,6 @@
 
     .bn { border: none !important; }
 
-    /* NOT AVAILABLE CONTENT */
-        #not-available { 
-            height: 100vh;
-            width: 100vw; }
-
-        #not-available h1 {
-            text-align: center;
-            font-size: 3em;
-            line-height: 1em; }
-
-        #not-available p {
-            text-align: center;
-            font-size: 1.5em; }
-
     /* MARGINS */
         /* All */
             .m-0 { margin: 0px; }
@@ -231,15 +217,12 @@
         font-size: 7em; }
 
     h2 {
-        width: 100%;
-        text-align: center;
         margin: 0px;
         margin-top: 10px;
         font-size: 3.5em;
         font-family: 'Poiret One', cursive; }
 
     h3 {
-        width: 90%;
         margin: 0px;
         margin-top: 10px;
         font-size: 2.5em;
@@ -495,10 +478,6 @@
             background-color: var(--wm-details);
             border-radius: 5px; }
 
-        .servicesGrid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); }
-
         .service .imageCircle {
             width: 2.5vw;
             height: 2.5vw;
@@ -553,7 +532,6 @@
                 background-color: rgba(0,0,0,0.9); }
         
             .modal-content {
-                height: 90%;
                 color: var(--white);
                 padding: 15px;
                 width: 60%;
@@ -564,9 +542,6 @@
                 width: 100%;
                 height: 100%; }
             
-            #formInfo p { text-align: center; }
-            #formInfo h3 { text-align: center; }
-
             .close {
                 color: var(--wm-details);
                 float: right;
@@ -581,7 +556,7 @@
 
             #formInfo label {
                 cursor: pointer;
-                padding: 0px 0px 0px 20px;
+                padding: 0px;
                 width: 20vw;
                 text-align: left;
                 font-size: 1.3em;
@@ -600,8 +575,6 @@
                 font-family: 'Poiret One', cursive; }
         
             #formInfo textarea {
-                padding: 5px;
-                box-sizing: content-box;
                 color: var(--white);
                 background-color: transparent;
                 width: 20vw;
@@ -659,22 +632,18 @@
             height: 100%;
             background-color: var(--wm-details); }
 
-        .experience .basicInfo .textInfo { 
-            height: 100%;
-            width: 90%; }
-
         .experience .basicInfo:hover {
             background-color: var(--wm-details-hover); }
 
         .experience .basicInfo:hover .experienceButton {
             color: var(--wm-dark-background); }
         
-        .experience .basicInfo .experienceButton {
+        .experience .basicInfo div span {
             cursor: pointer;
             font-size: 1.6em;
             color: var(--wm-details-hover); }
 
-        .experience .basicInfo .experienceButton:hover {
+        .experience .basicInfo div span:hover {
             color: var(--wm-background); }
 
         .experience .extendedInfo {
@@ -754,87 +723,11 @@
             background-color: var(--wm-details);
             border-radius: 30px; }
 
-    /*** PROJECTS ***/
-        #projects {
-            width: 100%;
-            height: auto; }
-        .projectGrid {
-            width: 90%;
-            height: 100%;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); }
-        .project {
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-            border-radius: 25px;
-            margin: 30px auto;
-            background-color: var(--wm-dark-background);
-            border: 2px solid var(--wm-details);
-            height: 28vh;
-            width: 80%;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center; }
-        .project .icons {
-            position: absolute;
-            bottom: 2%;
-            width: 98%; }
-        .project .icons span {
-            margin: 0px 5px;
-            font-size: 2.4em;
-            color: var(--wm-details-alpha50); }
-        .project h5 {
-            text-align: center;
-            width: 90%;
-            margin: 0px;
-            font-size: 3em; }
-        .project p {
-            text-align: center;
-            margin: 0px;
-            width: 90%;
-            font-size: 1.2em; }
-        /* Up Card */
-            .upCard {
-                position: absolute;
-                top: 0%;
-                left: 0%;
-                width: 100%;
-                height: 28vh; }
-                
-        /* Down Card */
-            .downCard {
-                position: absolute;
-                top: 100%;
-                left: 0%;
-                width: 100%;
-                height: 28vh; }
-
-        .project:hover .upCard { top: -100%; }
-        .project:hover .downCard { top: 0%; }
-        .project:hover .icons { bottom: -45px; }
-        .project:hover .icons span { color: var(--wm-details); }
-        .project:hover .icons .arrow { transform: rotate(180deg); }
-
-        /* dropProjects */
-        #dropProjects {
-            display: none;
-            height: 0%; }
-        .showMoreProjects {
-            cursor: pointer;
-            background-color: var(--wm-details-alpha50);
-            height: 5vh;
-            width: 100%; }
-        .showMoreProjects:hover { background-color: var(--wm-details); }
-        .showMoreProjects:hover span, .showMoreProjects:hover p { color: var(--wm-background); }
-        .showMoreProjects:active { background-color: var(--wm-details-hover); }
-        .showMoreProjects span, .showMoreProjects p { 
-            font-size: 1.4em;
-            color: var(--wm-details-hover); }
-        .showMoreProjects p { font-weight: bold; }
         
     /*** FOOTER ***/
+        footer { 
+            border-top: 1px solid var(--wm-details); }
+
         footer .footerInfo {
             text-align: left;
             background-color: var(--wm-details);
@@ -859,27 +752,27 @@
         footer .footerInfo .row-start:hover span, footer .footerInfo .row-start:hover a {
             color: var(--wm-details); }
 
-        footer .footerContact {
+        footer .contactInfo {
             width: 50%;
             height: 100%; }
         
-        footer .footerContact h2, footer .footerContact p, footer .footerContact form {
+        footer .contactInfo h2, footer .contactInfo p, footer .contactInfo form {
             width: 80%;
             text-align: center;
             color: var(--wm-details); }
         
-        footer .footerContact .row-center {
+        footer .contactInfo .row-center {
             width: 100%; }
 
-        footer .footerContact .row-center .column-start, footer .footerContact .column-start { width: 100%; }
+        footer .contactInfo .row-center .column-start, footer .contactInfo .column-start { width: 100%; }
 
-        footer .footerContact .row-center .column-start input { width: 95% !important; }
+        footer .contactInfo .row-center .column-start input { width: 95% !important; }
         
-        footer .footerContact .row-center .right_input input { 
+        footer .contactInfo .row-center .right_input input { 
             margin-left: 5%;
             width: 95% !important; }
         
-        footer .footerContact input, textarea {            
+        footer .contactInfo input, textarea {            
             width: 100%;
             box-sizing: border-box;
             font-size: 1.1em;
@@ -892,18 +785,18 @@
 
         ::-webkit-input-placeholder { color: var(--wm-background); }
 
-        footer .footerContact textarea {
+        footer .contactInfo textarea {
             border-radius: 20px;
             height: 15vh; }
 
-        footer .footerContact input:focus, footer .footerContact textarea:focus {
+        footer .contactInfo input:focus, footer .contactInfo textarea:focus {
             outline: none;
             border-radius: 5px;
             font-weight: bold;
             color: var(--gray);
             background-color: var(--wm-background); }
 
-        footer .footerContact input[type="submit"] {
+        footer .contactInfo input[type="submit"] {
             border: none;
             border-bottom: 2px solid var(--wm-details);
             box-sizing: content-box;
@@ -917,57 +810,13 @@
             font-weight: bold;
             background-color: transparent; }
 
-        footer .footerContact input[type="submit"]:hover {
+        footer .contactInfo input[type="submit"]:hover {
             border-radius: 50px;
             color: var(--wm-dark-background);
             background-color: var(--wm-details);}
 
-        footer .footerContact .column-end {
+        footer .contactInfo .column-end {
             width: 100%; }
 
-/* ERROR PAGE */
-    #errorPage {
-        height: 100vh;
-        width: 100%; }
 
-    #errorPage #infoPage {
-        height: 100%;
-        background-color: var(--wm-background);
-        width: 50%; }
-
-    #errorPage #infoPage h1 {
-        text-align: center;
-        line-height: 0.85em; }
     
-    #errorPage #infoPage .btn {
-        margin: 0 auto;
-        padding: 5px 10px;
-        border: 2px solid var(--wm-details);
-        border-radius: 50px;
-        background-color: var(--wm-details);
-        color: var(--wm-background);
-        font-size: 1.2em;
-        font-weight: bold;
-        cursor: pointer; }
-
-    #errorPage #infoPage .btn:hover {
-        background-color: var(--wm-background);
-        color: var(--wm-details); }
-
-    #errorPage #imagePage {
-        display: grid;
-        place-items: center center;
-        height: 100%;
-        background-color: var(--wm-details);
-        width: 50%; }
-
-    #errorPage #imagePage img { width: 90% !important; }
-
-    #errorPage .scrolldown .text { text-align: center;}
-
-    #errorPage .scrolldown {
-        position: absolute;
-        bottom: 1%;
-        left: 25%;
-        transform: translate(-50%, -5%) scale(0.5); 
-        width: 20%; }
